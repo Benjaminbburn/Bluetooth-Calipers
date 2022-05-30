@@ -1,9 +1,11 @@
 # Bluetooth-Calipers
 
+![](Images/main.png)
+
 Sends caliper data to connected bluetooth device when button is pressed.
 
 Includes custom 3D files (STEP, 3mf, and STL) that provide a right angle connector for the connector and button as well as a case for the ESP32. 
-
+![](Images/IMG_6026.jpeg)
 I have only tested with iGuaging calipers (or other measuring devices) that have a 5-pin data port. This should also work with Mitutoyo devices but I have not personally tested. 
 
 Supports two types of button presses: 
