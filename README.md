@@ -88,6 +88,7 @@ Once connected, used either the short or long press to send data to your connect
 ## External Sources
 
 Number 1 was used heavily for diagrams and base code (useful when you want to constantly return a value via USB without a button press). 
+
 Number 2 has additional schematics and links to documenting provided by Mitutoyo 
 
 1. https://www.instructables.com/Interfacing-a-Digital-Micrometer-to-a-Microcontrol/
