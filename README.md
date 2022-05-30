@@ -79,7 +79,7 @@ Since they were originally documented goings from RIGHT to LEFT when looking AT 
 
 1. Flash code using platformIO or Arduino IDE
 2. Move everything into the case and connect connector to data port
-3. Attach case to back of calipers (blutak, velcro, glue, VHB Tape, etc. all seem to work well)
+3. Attach case to back of calipers (velcro, blu-tak, glue, VHB Tape, etc. all seem to work well)
 4. When plugged in for the first time, connect to bluetooth device named "ESP32 Keyboard"
 
 Once connected, used either the short or long press to send data to your connected device. 
