@@ -18,7 +18,7 @@ Supports two types of button presses:
 
 ---
 
-Includes custom 3D files (STEP, 3mf, and STL) that provide a right angle connector for the connector and button as well as a case for the ESP32. 
+Includes custom 3D files (.STEP, .3mf, and .STL) that provide a right angle connector for the connector and button as well as a case for the ESP32. I have included .3mf files with best support and print settings. 
 
 ![](Images/IMG_6026.jpeg)
 
@@ -47,6 +47,7 @@ I have only tested with iGaging calipers that have a 5-pin data port. This shoul
  3. Solder wires to the button and insert it in the squre hole on the top of the connector piece, first feeding through the wires. 
 
 ### Making Connections
+
 NOTE: PINS ARE EASY TO GET MIXED UP. 
 
 Pins, as originally doccumented, from RIGHT to LEFT on calipers:
@@ -62,6 +63,7 @@ Since they were originally doccumented goings from RIGHT to LEFT when looking AT
 ![](Images/ESP32Wiring.png)
 
 #### Soldering Steps
+
   0. De-solder any pins on the board. 
   1. Solder one button wire to pin 5 on the ESP32 and the other button wire to a ground pin on the ESP32.
   2. Solder GND (pin 1) from the connector to a ground pin on the ESP32.
@@ -74,6 +76,7 @@ Since they were originally doccumented goings from RIGHT to LEFT when looking AT
   9. Solder the REQ (pin 5) from the connect to pin 2 on the ESP32
 
 ### Finishing up
+
 1. Flash code using platformIO or Arduino IDE
 2. Move everthing into the case and connect connector to data port
 3. Attach case to back of calipers (blutak, velcro, glue, VHB Tape, etc. all seem to work well)
@@ -83,7 +86,9 @@ Once connected, used either the short or long press to send data to your connect
 
 ---
 ## External Sources
+
 Number 1 was used heavily for diagrams and base code (useful when you want to constantly return a value via USB without a button press). 
+
 Number 2 has additional schematics and links to doccumentions provided by mitutoyo 
 
 1. https://www.instructables.com/Interfacing-a-Digital-Micrometer-to-a-Microcontrol/
