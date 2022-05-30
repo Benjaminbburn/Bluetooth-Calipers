@@ -15,7 +15,7 @@ Includes custom 3D files (STEP, 3mf, and STL) that provide a right angle connect
 
 ![](Images/IMG_6026.jpeg)
 
-I have only tested with iGaging calipers that have a 5-pin data port. This should also work with Mitutoyo devices or other iGaging devies with a 5-pin data port.  
+I have only tested with iGaging calipers that have a 5-pin data port. This should also work with Mitutoyo devices or other iGaging devices with a 5-pin data port.  
 
 ---
 
@@ -37,7 +37,7 @@ I have only tested with iGaging calipers that have a 5-pin data port. This shoul
  1. Print "Caliper Data Port Connector - 5 pin". I found TPU worked the best. 
  2. Feel solid core wire as shows in the image below. Once all 5 wire are fed through, I used some super glue to hold them in place but it is not needed. 
 ![](Images/Connector.png)
- 3. Solder wires to the button and insert it in the squre hole on the top of the connector piece, first feeding through the wires. 
+ 3. Solder wires to the button and insert it in the square hole on the top of the connector piece, first feeding through the wires. 
 
 ### Making Connections
 
@@ -58,14 +58,14 @@ Pins, from RIGHT to LEFT on calipers
   4. Solder the other end of the resistor to pin 2 on the ESP32.
   5. Solder the emitter pin on the 2N2222 transistor (right pin when flat side is facing you) to a ground pin on the ESP32.
   6. Solder collector pin on the 2N2222 transistor (left pin when flat side is facing you) to pin 5 on the connector.
-  7. Solder DATA (pin 2) fron the connector to pin 4 on the ESP32.
+  7. Solder DATA (pin 2) from the connector to pin 4 on the ESP32.
   8. Solder CLK (pin 3) from the connector to pin 0 on the ESP32.
   9. Solder the REQ (pin 5) from the connect to pin 2 on the ESP32
 
 ---
 ## External Sources
 Number 1 was used heavily for diagrams and base code (useful when you want to constantly return a value via USB without a button press). 
-Number 2 has additional schematics and links to doccumentions provided by mitutoyo 
+Number 2 has additional schematics and links to documenting provided by Mitutoyo 
 
 1. https://www.instructables.com/Interfacing-a-Digital-Micrometer-to-a-Microcontrol/
 2. https://github.com/Roger-random/mitutoyo

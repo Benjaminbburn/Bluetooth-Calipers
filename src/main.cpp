@@ -1,13 +1,13 @@
-// Adapated from: 
+// Adapted from: 
 // 1. https://www.instructables.com/id/Interfacing-a-Digital-Micrometer-to-a-Microcontrol/
-// 2.  https://github.com/Roger-random/mitutoyo
+// 2. https://github.com/Roger-random/mitutoyo
 
 #include <Arduino.h>
 #include <BleKeyboard.h>  //used to send keystrokes to connected device
 #include <Bounce2.h>      //used to manage button behavior
 
 // Pins, from RIGHT to LEFT on calipers
-// 1. GND - Ground 
+// 1. GND - Ground
 // 2. DATA - Measured data
 // 3. CK - Clock
 // 4. NA - No Connection
