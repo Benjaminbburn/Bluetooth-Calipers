@@ -5,7 +5,14 @@
 
 ### Sends caliper data to connected bluetooth device when button is pressed.
 
-### Supports two types of button presses: 
+---
+
+The goal of this project was to recreate the functinoality of [Mitutoyo's bluetooth U-WAVE](https://www2.mitutoyo.co.jp/eng/products/keisokusystem/wireless.html) using innexpensive hardware (total cost, excluding calipers, ~$15).
+
+I ended up using USB for power since I am always near my computer when using this and did not want to manage a battery. There is no reason a 3.3v battery could not be added to make it fully wireless. Bluetooth was chosen to send data since many ESP32's are not able to act as a HID (i.e. cannot act as keyboard/mouse). 
+
+
+Supports two types of button presses: 
 1. **Short press**: Data is sent without pressing the return key (used when you want to modify the value)
 2. **Long press**: Data is sent and the enter key is pressed (used when the value does not need to be modified)
 
@@ -22,8 +29,8 @@ I have only tested with iGaging calipers that have a 5-pin data port. This shoul
 ## Required Hardware
 1. ESP32 - I used [this development board from amazon](https://www.amazon.com/HiLetgo-ESP-WROOM-32-Development-Microcontroller-Integrated/dp/B0718T232Z/ref=sr_1_4?crid=5GS42RL0ZTBY&keywords=esp32&qid=1653872753&sprefix=esp32%2Caps%2C75&sr=8-4)
 2. Button - I used a 6mm x 6mm x 3.1mm button [from this kit on amazon](https://www.amazon.com/gp/product/B07LCBLB8N/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1)
-3. 2N2222 Transistor 
-4. 100k ohm resistor
+3. 1 2N2222 Transistor 
+4. 1 100k ohm resistor
 5. Solid core wire (I tested with internal wires from solid core ethernet cables and breadboard jumper cables)
 6. Wire/solder
 7. 3D printer
@@ -40,15 +47,19 @@ I have only tested with iGaging calipers that have a 5-pin data port. This shoul
  3. Solder wires to the button and insert it in the squre hole on the top of the connector piece, first feeding through the wires. 
 
 ### Making Connections
+NOTE: PINS ARE EASY TO GET MIXED UP. 
 
-Pins, from RIGHT to LEFT on calipers
+Pins, as originally doccumented, from RIGHT to LEFT on calipers:
   1. GND - Ground 
   2. DATA - Measured data
   3. CK - Clock
   4. NA - No Connection
   5. REQ - Request
+ 
 
-![](Images/ESP32 Wiring.png)
+Since they were originally doccumented goings from RIGHT to LEFT when looking AT them on the calipers, their orientation flips for the image below (i.e. pin 1 on the LEFT and pin 5 on the RIGHT)
+
+![](Images/ESP32Wiring.png)
 
 #### Soldering Steps
   0. De-solder any pins on the board. 
@@ -61,6 +72,14 @@ Pins, from RIGHT to LEFT on calipers
   7. Solder DATA (pin 2) fron the connector to pin 4 on the ESP32.
   8. Solder CLK (pin 3) from the connector to pin 0 on the ESP32.
   9. Solder the REQ (pin 5) from the connect to pin 2 on the ESP32
+
+### Finishing up
+1. Flash code using platformIO or Arduino IDE
+2. Move everthing into the case and connect connector to data port
+3. Attach case to back of calipers (blutak, velcro, glue, VHB Tape, etc. all seem to work well)
+4. When plugged in for the first time, connect to bluetooth device named "ESP32 Keyboard"
+
+Once connected, used either the short or long press to send data to your connected device. 
 
 ---
 ## External Sources
